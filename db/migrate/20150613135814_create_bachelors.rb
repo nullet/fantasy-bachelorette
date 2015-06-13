@@ -4,7 +4,7 @@ class CreateBachelors < ActiveRecord::Migration
       t.string  :first_name
       t.string  :last_name
       t.integer :score
-      t.boolean :eliminated
+      t.boolean :eliminated, default: false
       
       t.timestamps
     end
