@@ -11,14 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150613135814) do
+ActiveRecord::Schema.define(version: 20150613144724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bachelor_stats", force: true do |t|
+    t.integer  "bachelor_id"
+    t.integer  "stat_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "bachelors", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
+    t.integer  "score"
+    t.boolean  "eliminated", default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "elimination_picks", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "bachelor_id"
+    t.integer  "wager"
+    t.boolean  "correct",     default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "picks", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "bachelor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stats", force: true do |t|
+    t.string   "description"
     t.integer  "score"
     t.datetime "created_at"
     t.datetime "updated_at"
