@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: bachelor_stats
+#
+#  id          :integer          not null, primary key
+#  bachelor_id :integer
+#  stat_id     :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 require 'test_helper'
 
 class BachelorStatTest < ActiveSupport::TestCase
