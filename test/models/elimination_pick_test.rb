@@ -9,6 +9,7 @@
 #  correct     :boolean          default(FALSE)
 #  created_at  :datetime
 #  updated_at  :datetime
+#  league_id   :integer
 #
 
 require 'test_helper'

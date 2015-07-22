@@ -1,13 +1,11 @@
 # == Schema Information
 #
-# Table name: picks
+# Table name: league_users
 #
-#  id          :integer          not null, primary key
-#  user_id     :integer
-#  bachelor_id :integer
-#  created_at  :datetime
-#  updated_at  :datetime
-#  league_id   :integer
+#  league_id  :integer          not null
+#  user_id    :integer          not null
+#  created_at :datetime
+#  updated_at :datetime
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

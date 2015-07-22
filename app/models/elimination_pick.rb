@@ -9,12 +9,14 @@
 #  correct     :boolean          default(FALSE)
 #  created_at  :datetime
 #  updated_at  :datetime
+#  league_id   :integer
 #
 
 class EliminationPick < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :bachelor
+  belongs_to :league
 
   def update_correct
     if self.bachelor.eliminated?

@@ -7,6 +7,7 @@
 #  stat_id     :integer
 #  created_at  :datetime
 #  updated_at  :datetime
+#  league_id   :integer
 #
 
 class BachelorStat < ActiveRecord::Base
