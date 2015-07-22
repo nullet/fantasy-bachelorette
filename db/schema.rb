@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150613144724) do
+ActiveRecord::Schema.define(version: 20150722170359) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20150613144724) do
     t.integer  "stat_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "league_id"
   end
 
   create_table "bachelors", force: true do |t|
@@ -39,6 +40,17 @@ ActiveRecord::Schema.define(version: 20150613144724) do
     t.boolean  "correct",     default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "league_id"
+  end
+
+  create_table "league_users", id: false, force: true do |t|
+    t.integer "league_id", null: false
+    t.integer "user_id",   null: false
+  end
+
+  create_table "leagues", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "picks", force: true do |t|
@@ -46,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150613144724) do
     t.integer  "bachelor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "league_id"
   end
 
   create_table "stats", force: true do |t|
