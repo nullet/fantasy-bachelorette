@@ -10,6 +10,7 @@
 #  score           :integer
 #  created_at      :datetime
 #  updated_at      :datetime
+#  username        :string(255)
 #
 
 require 'test_helper'

@@ -2,10 +2,11 @@
 #
 # Table name: league_users
 #
-#  league_id  :integer          not null
-#  user_id    :integer          not null
-#  created_at :datetime
-#  updated_at :datetime
+#  league_id    :integer          not null
+#  user_id      :integer          not null
+#  created_at   :datetime
+#  updated_at   :datetime
+#  commissioner :boolean          default(FALSE)
 #
 
 require 'test_helper'
